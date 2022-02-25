@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "layer-demo:JokeFunction",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "lambdas/joke/app.lambdaHandler",
+        "projectRoot": "${workspaceFolder}/"
+      },
+      "lambda": {
+        "runtime": "nodejs14.x",
+        "payload": {},
+        "environmentVariables": {
+        }
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "layer-demo:HelloWorldFunction",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "lambdas/hello-world/app.lambdaHandler",
+        "projectRoot": "${workspaceFolder}/"
+      },
+      "lambda": {
+        "runtime": "nodejs14.x",
+        "payload": {},
+        "environmentVariables": {
+        }
+      }
+    }
+  ]
+}

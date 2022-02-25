@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@common": ["./node_modules/common__internal/index.js"],
+      "@common/*": ["./node_modules/common__internal/node_modules/*"]
+    }
+  }
+}

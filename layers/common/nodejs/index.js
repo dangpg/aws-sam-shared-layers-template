@@ -1,0 +1,3 @@
+exports.ping = () => {
+  return "pong";
+};

@@ -1,0 +1,26 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "hello world sample for NodeJS",
+  "main": "app.js",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "module-alias": "^2.2.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "common__internal": "file:../../layers/common/nodejs"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@common/(.*)": "<rootDir>/node_modules/common__internal/node_modules/$1",
+      "@common": "<rootDir>/node_modules/common__internal/"
+    }
+  }
+}
